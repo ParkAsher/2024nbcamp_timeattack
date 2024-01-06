@@ -7,11 +7,19 @@ import {
 } from '@nestjs/common';
 import { UserService } from './user.service';
 import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guards';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
+@ApiTags('회원')
 @Controller('users')
 export class UserController {
     constructor(private readonly userService: UserService) {}
 
+    /**
+     * 정보 조회
+     * @param req
+     * @returns
+     */
+    @ApiBearerAuth()
     @UseGuards(JwtAuthGuard)
     @Get('/info')
     async getUserInfo(@Request() req) {
