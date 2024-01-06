@@ -18,5 +18,8 @@ Access Token 만을 사용하여 로그인을 처리하면 토큰 자체에 payl
 코드의 중복을 줄이기 위해 노력하였다.
 
 ## ERD
+![121221](https://github.com/ParkAsher/2024nbcamp_timeattack/assets/111232061/2d21f997-05ba-4d16-a0cb-27b3cae753a3)
+
 
 ## API
+(swagger) http://localhost:3001/api
